@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/weightFragment"
+        android:icon="@drawable/mass"
+        android:title="За 1 кг" />
+    <item
+        android:id="@+id/volumeFragment"
+        android:icon="@drawable/bottles"
+        android:title="За 1 литр" />
+    <item
+        android:id="@+id/pieceFragment"
+        android:icon="@drawable/egg"
+        android:title="За 1 шт" />
+</menu>
