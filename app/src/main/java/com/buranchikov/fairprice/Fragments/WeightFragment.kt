@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
+import android.view.Gravity
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -12,8 +13,14 @@ import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.appcompat.content.res.AppCompatResources.getDrawable
 import androidx.core.view.isVisible
+import androidx.core.view.marginEnd
+import androidx.core.view.marginStart
+import androidx.core.view.setMargins
+import androidx.gridlayout.widget.GridLayout
+import androidx.gridlayout.widget.GridLayout.ALIGN_BOUNDS
 import androidx.lifecycle.ViewModelProvider
 import com.buranchikov.fairprice.R
 import com.buranchikov.fairprice.databinding.FragmentJoinBinding
@@ -26,6 +33,7 @@ class WeightFragment : Fragment() {
     private var listPrices: ArrayList<Float> = ArrayList<Float>()
     private var weight = 0.0F
     private var price = 0.0F
+
     private lateinit var lpLittlePrice: LinearLayout.LayoutParams
     private val arrayTextView: ArrayList<TextView> = ArrayList()
     val textColorAccent = R.color.blue_accent
@@ -40,7 +48,10 @@ class WeightFragment : Fragment() {
         binding.tvPostfixPrice.text = getString(R.string.postfix_rub_kg)
 
         lpLittlePrice =
-            LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT)
+            LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            )
         lpLittlePrice.setMargins(7, 0, 7, 0)
         return binding.root
     }
@@ -144,7 +155,7 @@ class WeightFragment : Fragment() {
                 arrayTextView.get(indexMinPrice).typeface = Typeface.DEFAULT_BOLD
                 arrayTextView.get(indexMinPrice).background =
                     getDrawable(requireContext(), R.drawable.background_input)
-                arrayTextView.get(indexMinPrice).setPadding(3,0,3,0)
+                arrayTextView.get(indexMinPrice).setPadding(3, 0, 3, 0)
 
             }
 

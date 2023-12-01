@@ -53,11 +53,10 @@
         android:layout_marginRight="@dimen/app_margin_16dp"
         android:text="@string/record_price"
         android:textSize="@dimen/text_size_button"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/llResultPrice"
-        tools:visibility="gone" />
+        app:layout_constraintTop_toBottomOf="@+id/llResultPrice" />
 
     <LinearLayout
         android:id="@+id/llRecordPricesContainer"
@@ -66,11 +65,10 @@
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:orientation="horizontal"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnWeightRec"
-        tools:visibility="gone" />
+        app:layout_constraintTop_toBottomOf="@+id/btnWeightRec" />
 
     <View
         android:id="@+id/view"
