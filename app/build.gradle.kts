@@ -25,6 +25,8 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            applicationIdSuffix = "FairPrice"
+            versionNameSuffix = "1.0"
         }
     }
     compileOptions {

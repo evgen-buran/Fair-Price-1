@@ -7,7 +7,7 @@
     <string name="pices_product_subtitle">Количество, шт</string>
     <string name="price_product_string">Цена, руб</string>
     <string name="reset">Сбросить</string>
-    <string name="record_price">Сравнить</string>
+    <string name="record_price">Запомнить</string>
     <string name="postfix_rub_kg">руб/кг</string>
     <string name="postfix_rub_liter">руб/л</string>
     <string name="postfix_rub_piece">руб/шт</string>

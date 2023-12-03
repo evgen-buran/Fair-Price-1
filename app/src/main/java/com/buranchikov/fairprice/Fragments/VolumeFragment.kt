@@ -38,8 +38,12 @@ class VolumeFragment : Fragment() {
 
         lpLittlePrice =
             LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
-        lpLittlePrice.setMargins(7, 0, 7, 0)
-
+        lpLittlePrice.setMargins(
+            dpToPx(resources.getDimension(R.dimen.margin_small_price)),
+            0,
+            dpToPx(resources.getDimension(R.dimen.margin_small_price)),
+            0
+        )
         return binding.root
     }
 
@@ -104,7 +108,7 @@ class VolumeFragment : Fragment() {
         binding.btnWeightRec.setOnClickListener {
             var indexMinPrice = 0
             binding.llRecordPricesContainer.isVisible = true
-            if (viewModel.getPricesArray().size == 4) binding.btnWeightRec.isVisible = false
+//            if (viewModel.getPricesArray().size == 4) binding.btnWeightRec.isVisible = false
             val fairPrice = viewModel.getFairPrice()
             viewModel.addPriceList(fairPrice)
             binding.llRecordPricesContainer.removeAllViews()
@@ -146,7 +150,10 @@ class VolumeFragment : Fragment() {
             reset()
         }
     }
-
+    fun dpToPx(dp: Float): Int {
+        val density = resources.displayMetrics.density
+        return (dp * density + 0.5f).toInt()
+    }
     private fun reset() {
         viewModel.getPricesArray().clear()
         binding.llRecordPricesContainer.removeAllViews()
