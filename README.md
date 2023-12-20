@@ -16,5 +16,4 @@
 - ViewModel
 - LiveData
 
-
 [размещено на RuStore](https://apps.rustore.ru/app/com.buranchikov.fairprice.FairPrice)
