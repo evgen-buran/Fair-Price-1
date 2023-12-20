@@ -11,8 +11,8 @@
 Пользуйтесь на здоровье.
 
 Используются:
-- Kotlin, 
-- Navigation Component, 
+- Kotlin,
+- Navigation Component
 - ViewModel
 - LiveData
   
