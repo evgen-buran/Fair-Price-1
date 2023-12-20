@@ -15,5 +15,8 @@
 - Navigation Component, 
 - ViewModel
 - LiveData
+  
+[APK](app/release/Fair_price_01.apk)
 
 [размещено на RuStore](https://apps.rustore.ru/app/com.buranchikov.fairprice.FairPrice)
+
